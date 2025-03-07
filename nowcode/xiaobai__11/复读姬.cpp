@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+#define int long long
+#define rep(i, a, b) for (int i = (a); i <= (b); i++)
+#define rem(i, a, b) for (int i = (a); i >= (b); i--)
+const int N = 2e6 + 5;
+const int mod = 1e9 + 7, inf = 1e18 + 3;
+const double eps = 1e-6;
+using namespace std;
+using pii = pair<int, int>;
+
+template <typename... T> void print(T... a) {
+  ((cout << a << ' '), ...);
+  cout << "\n";
+}
+int ti = 1;
+int n;
+string ss[N];
+int pre[N], suf[N];
+void work() {
+  cin >> n;
+  rep(i, 1, n) cin >> ss[i];
+  rep(i, 1, n) if (ss[i] == ss[i - 1]) pre[i] = pre[i - 1] + 1;
+  else pre[i] = 1;
+  rem(i, n, 1) if (ss[i] == ss[i + 1]) suf[i] = suf[i + 1] + 1;
+  else suf[i] = 1;
+  int ans = 0;
+//   rep(i, 1, n) print(pre[i], suf[i], ss[i]);
+  rep(i, 1, n) {
+    ans = max(ans, pre[i]);
+    if (ss[i - 1] == ss[i + 1])
+      ans = max(ans, max(pre[i], pre[i - 1] + suf[i + 1]));
+  };
+  cout << ans << endl;
+}
+signed main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr), cout.tie(nullptr);
+
+  if (ti == 0)
+    cin >> ti;
+  while (ti--) {
+    work();
+  }
+  return 0;
+}
