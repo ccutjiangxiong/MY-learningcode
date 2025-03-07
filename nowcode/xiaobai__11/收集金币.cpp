@@ -16,12 +16,6 @@ int ti = 1;
 int n, m, t;
 int mat[1010][1010];
 int f[1111][1111];
-
-
-
-
-
-
 int dp[1111][1111];
 
 void work() {
