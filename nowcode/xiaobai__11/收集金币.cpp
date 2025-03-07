@@ -11,8 +11,11 @@ using pii = pair<int, int>;
 template <typename... T> void print(T... a) {
   ((cout << a << ' '), ...);
   cout << "\n";
-  
 }
+
+
+
+
 int ti = 1;
 int n, m, t;
 int mat[1010][1010];
