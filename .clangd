@@ -1,31 +1,53 @@
-Index:
-  Background: Build
-
-CompileFlags:
-  Add: [-xc++, -Wall, -std=c++20]
-  Compiler: clang++
-
-Diagnostics:
-  ClangTidy:
-    Add: ["*"]
-    Remove: [
-      abseil*,
-      fuchsia*,
-      llvmlib*,
-      zircon*,
-      altera*,
-      google-readability-todo,
-      readability-braces-around-statements,
-      hicpp-braces-around-statements,
-      modernize-use-trailing-return-type, # 不要每个都加上尾返回值类型
-      readability-identifier-length, # 不检查变量名长度
-      cppcoreguidelines-avoid-magic-numbers, # 不检查魔法数字
-      readability-magic-numbers, # 同上
-      # Different indentation for 'if' and corresponding 'else', # 不检查if else缩进
-      # Unused variable 'mod', # 不检查未使用变量
-      cppcoreguidelines-pro-type-vararg, # 不检查可变参数
-      cppcoreguidelines-pro-type-const-cast, # 不检查const_cast
-      cppcoreguidelines-pro-type-cstyle-cast, # 不检查c风格转换
-      "cppcoreguidelines-pro-type-reinterpret-cast", # 不检查reinterpret_cast
-      cppcoreguidelines-pro-bounds-constant-array-index, # 不检查数组越界
-    ]
+{
+  "Index": {
+    "Background": "Build"
+  },
+  "CompileFlags": {
+    "Add": [
+      "-xc++",
+      "-Wmost",
+      "-std=c++20",
+      "-Wno-unused-const-variable"
+    ],
+    "Compiler": "clang++"
+  },
+  "Diagnostics": {
+    "ClangTidy": {
+      "Add": [
+        "*"
+      ],
+      "Remove": [
+        "abseil*",
+        "fuchsia*",
+        "llvmlib*",
+        "zircon*",
+        "altera*",
+        "readability-identifier-length",
+        "google-build-using-namespace",
+        "misc-use-internal-linkage",
+        "cppcoreguidelines-avoid-non-const-global-variables",
+        "hicpp-avoid-c-arrays",
+        "cppcoreguidelines-avoid-c-arrays",
+        "cppcoreguidelines-pro-bounds-constant-array-index",
+        "google-readability-braces-around-statements",
+        "readability-braces-around-statements",
+        "cppcoreguidelines-avoid-magic-numbers",
+        "readability-implicit-bool-conversion",
+        "cppcoreguidelines-init-variables",
+        "hicpp-braces-around-statements",
+        "readability-magic-numbers",
+        "readability-isolate-declaration",
+        "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+        "readability-misleading-indentation",
+        "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
+        "hicpp-no-array-decay",
+        "performance-avoid-endl",
+        "hicpp-uppercase-literal-suffix",
+        "cert-dcl16-c",
+        "readability-uppercase-literal-suffix",
+        "modernize-avoid-c-arrays",
+        "modernize-use-trailing-return-type"
+      ]
+    }
+  }
+}

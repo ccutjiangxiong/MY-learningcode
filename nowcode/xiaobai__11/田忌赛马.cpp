@@ -2,11 +2,10 @@
 
 #include <iostream>
 
-
 #define int long long
 #define rep(i, a, b) for (int i = (a); i <= (b); i++)
 #define rem(i, a, b) for (int i = (a); i >= (b); i--)
-const int N   = 2e6 + 5;
+const int N = 2e6 + 5;
 const int mod = 1e9 + 7, inf = 1e18 + 3;
 const double eps = 1e-6;
 using namespace std;

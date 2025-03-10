@@ -28,7 +28,7 @@ void work() {
     //   rep(i, 1, n) print(pre[i], suf[i], ss[i]);
     rep(i, 1, n) {
         ans = max(ans, pre[i]);
-        if (ss[i - 1] == ss[i + 1]) ans = max(ans, max(pre[i], pre[i - 1] + suf[i + 1]));
+        if (ss[i - 1] == ss[i + 1]) ans = max({ans, pre[i], pre[i - 1] + suf[i + 1]});
     };
     cout << ans << endl;
 }
