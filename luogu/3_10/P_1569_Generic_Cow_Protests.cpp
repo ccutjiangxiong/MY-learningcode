@@ -14,22 +14,29 @@ void print(T... a) {
     cout << "\n";
 }
 int ti = 1;
-int n, i, j;
-int fun(int n, int i, int j) {
-    if (n < 2) return n;
-    if (min({i - 1, n - i, j - 1, n - j}) > 0) return 4 * n - 4 + fun(n - 2, i - 1, j - 1);
-    if (i == 1) return j;
-    if (j == n) return n - 1 + i;
-    if (i == n) return 2 * n - 2 + (n - j) + 1;
-    return 3 * n - 3 + (n - i) + 1;
-}
+int n;
+int g[N];
+int dp[1111][1111];
+int pre[N], ans[N];
 void work() {
-    cin >> n >> i >> j;
-    print(fun(n, i, j));
+    cin >> n;
+    rep(i, 1, n) cin >> g[i];
+    rep(i, 1, n) pre[i] = pre[i - 1] + g[i];
+    ans[1] = 1;
+    rep(i, 1, n) rep(j, i, n) {
+        if (pre[j] - pre[i - 1] >= 0 && ans[i - 1]) dp[i][j] = ans[i - 1] + 1;
+        ans[j] = max(ans[j], dp[i][j]);
+    }
+    // rep(i, 1, n) cout << ans[i] << endl;
+    if (ans[n])
+        cout << ans[n];
+    else
+        cout << "Impossible";
 }
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
+
     if (ti == 0) cin >> ti;
     while (ti--) {
         work();

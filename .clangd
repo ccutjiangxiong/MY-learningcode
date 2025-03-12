@@ -7,7 +7,9 @@
       "-xc++",
       "-Wmost",
       "-std=c++20",
-      "-Wno-unused-const-variable"
+      "-Wno-unused-const-variable",
+      "-Wno-unused-variable",
+      "-Wunused-but-set-variable"
     ],
     "Compiler": "clang++"
   },
@@ -42,11 +44,15 @@
         "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
         "hicpp-no-array-decay",
         "performance-avoid-endl",
+        "cert-err58-cpp",
         "hicpp-uppercase-literal-suffix",
         "cert-dcl16-c",
         "readability-uppercase-literal-suffix",
         "modernize-avoid-c-arrays",
-        "modernize-use-trailing-return-type"
+        "modernize-use-trailing-return-type",
+        "misc-no-recursion",
+        "readability-math-missing-parentheses",
+        "readability-function-cognitive-complexity"
       ]
     }
   }

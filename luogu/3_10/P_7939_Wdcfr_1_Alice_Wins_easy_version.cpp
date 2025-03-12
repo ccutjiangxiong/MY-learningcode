@@ -13,23 +13,27 @@ void print(T... a) {
     ((cout << a << ' '), ...);
     cout << "\n";
 }
-int ti = 1;
-int n, i, j;
-int fun(int n, int i, int j) {
-    if (n < 2) return n;
-    if (min({i - 1, n - i, j - 1, n - j}) > 0) return 4 * n - 4 + fun(n - 2, i - 1, j - 1);
-    if (i == 1) return j;
-    if (j == n) return n - 1 + i;
-    if (i == n) return 2 * n - 2 + (n - j) + 1;
-    return 3 * n - 3 + (n - i) + 1;
-}
+int ti;
+int n;
+int a[N], b[N];
+int ans = 0;
 void work() {
-    cin >> n >> i >> j;
-    print(fun(n, i, j));
+    cin >> n;
+    rep(i, 1, 2 * n) cin >> a[i];
+    rep(i, 1, 2 * n) cin >> b[i];
+    rep(i, 1, n) b[i] = a[i] % 3 + 1;
+    rep(i, n + 1, 2 * n) a[i] = (b[i] - 1);
+    rep(i, n + 1, 2 * n) if (a[i] == 0) a[i] = 3;
+    cout << 2 * n << endl;
+    rep(i, 1, 2 * n) cout << a[i] << ' ';
+    cout << endl;
+    rep(i, 1, 2 * n) cout << b[i] << ' ';
+    cout << endl;
 }
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
+
     if (ti == 0) cin >> ti;
     while (ti--) {
         work();

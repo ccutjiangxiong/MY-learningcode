@@ -8,36 +8,21 @@ const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
 
-template <typename... T>
-void print(T... a) {
-    ((cout << a << ' '), ...);
-    cout << "\n";
+template <typename... T> void print(T... a) {
+  ((cout << a << ' '), ...);
+  cout << "\n";
 }
-int ti = 1;
-int n, m, k;
-int f[N], g[N], h[N];
+int ti=1;
+
 void work() {
-    cin >> n >> m >> k;
-    int ans = 1;
-    rep(l, 1, max(n, m)) {
-        g[l] += max(0ll, m - (l + k) + 1);
-        if (l > k) g[l] += max(0ll, m - (l - k) + 1);
-    }
-    rep(i, 1, n) cin >> f[i];
-    sort(f + 1, f + 1 + n);
-
-    rep(i, 1, n) rep(j, i + 1, n) {
-        ans += g[f[j] - f[i]];
-        // print(i, j, x);
-    }
-    cout << ans << endl;
+    print("你好");
 }
-
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
-
-    if (ti == 0) cin >> ti;
+    
+    if(ti==0)
+    cin >> ti;
     while (ti--) {
         work();
     }
