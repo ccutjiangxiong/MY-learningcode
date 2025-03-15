@@ -14,25 +14,22 @@ void print(T... a) {
     cout << "\n";
 }
 int ti = 1;
-int n;
-double x[N], r[N];
-vector<int> q;
-double ans[N], u[N],y[N];
-int ha,st=1,h[N];
-double slope(int i, int j) {
-    return u[i]==u[j]?1e-9:(y[j]-y[i])/(u[j]-u[i]);
-}
+int n, m;
+int ans;
+vector<int> e[1111];
 void work() {
     cin >> n;
-    rep(i, 1, n) ans[i] =r[i];
-    rep(i, 1, n) cin >> x[i] >> r[i];
-    rep(i, 1, n) {
-        for (int p : q) ans[i] = min(ans[i], (x[i] - x[p]) * (x[i] - x[p]) / 4 / ans[p]);
-        while()
+    int m = (n - 1) * n / 2;
+    rep(i, 1, m) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        e[u].push_back(w);
+        e[v].push_back(w);
     }
-    rep(i, 1, n) cout << ans[i] << endl;
+    rep(i, 1, n) sort(e[i].begin(), e[i].end());
+    rep(i, 1, n) for (int j = 1; j <= n - 1; j += 2) ans += e[i][j];
+    cout << ans << endl;
 }
-
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);

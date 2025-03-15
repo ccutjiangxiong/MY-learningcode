@@ -21,12 +21,10 @@ double ans[N];
 
 void work() {
     cin >> n;
-    rep(i, 1, n) ans[i] = mod;
-    rep(i, 1, n) cin >> x[i] >> r[i];
-    ans[1] = r[1];
-    rep(i, 2, n) rep(j, 1, i - 1) {
-        ans[i] = min({ans[i], (x[i] - x[j]) * (x[i] - x[j]) / 4 / ans[j], r[i]});
-    }
+    rep(i, 1, n) cin >> x[i] >> ans[i];
+    rep(i, 2, n) rep(j, 1, i - 1) 
+        ans[i] = min(ans[i], (x[i] - x[j]) * (x[i] - x[j]) / 4 / ans[j]);
+    
     rep(i, 1, n) cout << ans[i] << endl;
 }
 

@@ -1,4 +1,7 @@
 #include <bits/stdc++.h>
+
+#include <unordered_map>
+
 #define int long long
 #define rep(i, a, b) for (int i = (a); i <= (b); i++)
 #define rem(i, a, b) for (int i = (a); i >= (b); i--)
@@ -8,31 +11,37 @@ const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
 
+int in() {
+    int x;
+    return (cin >> x, x);
+}
 template <typename... T>
 void print(T... a) {
     ((cout << a << ' '), ...);
     cout << "\n";
 }
+
 int ti = 1;
-int n;
-double x[N], r[N];
-vector<int> q;
-double ans[N], u[N],y[N];
-int ha,st=1,h[N];
-double slope(int i, int j) {
-    return u[i]==u[j]?1e-9:(y[j]-y[i])/(u[j]-u[i]);
+int n, xx, yy;
+unordered_map<int, pii> mp;
+int dfs(int i, int j) {
+    if (i < 1 || j == i) return 0;
+    __int128 x = (__int128)(i - j) * (i * i + i * j + j * j);
+    print(i, j, (int)x);
+    if (x == n) {
+        xx = i, yy = j;
+        return 0;
+    }
+    if (x > n) return dfs(i - 1, j);
+    return dfs(i, j + 1);
 }
 void work() {
     cin >> n;
-    rep(i, 1, n) ans[i] =r[i];
-    rep(i, 1, n) cin >> x[i] >> r[i];
-    rep(i, 1, n) {
-        for (int p : q) ans[i] = min(ans[i], (x[i] - x[p]) * (x[i] - x[p]) / 4 / ans[p]);
-        while()
-    }
-    rep(i, 1, n) cout << ans[i] << endl;
+    if (dfs(100, 1))
+        cout << xx << ' ' << yy << endl;
+    else
+        cout << -1 << endl;
 }
-
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);

@@ -8,6 +8,10 @@ const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
 
+int in() {
+    int x;
+    return (cin >> x, x);
+}
 template <typename... T>
 void print(T... a) {
     ((cout << a << ' '), ...);
@@ -15,24 +19,25 @@ void print(T... a) {
 }
 int ti = 1;
 int n;
-double x[N], r[N];
-vector<int> q;
-double ans[N], u[N],y[N];
-int ha,st=1,h[N];
-double slope(int i, int j) {
-    return u[i]==u[j]?1e-9:(y[j]-y[i])/(u[j]-u[i]);
-}
+
 void work() {
     cin >> n;
-    rep(i, 1, n) ans[i] =r[i];
-    rep(i, 1, n) cin >> x[i] >> r[i];
-    rep(i, 1, n) {
-        for (int p : q) ans[i] = min(ans[i], (x[i] - x[p]) * (x[i] - x[p]) / 4 / ans[p]);
-        while()
+    // rep()
+    int a = 0, b = 1, c = 1;
+    rep(i, 1, n - 1) c = a + b, a = b, b = c, c %= 1 << 31;
+    // euler(N);
+    string s;
+    // print(c);
+    s += to_string(c) + '=';
+    int g = c;
+    rep(i, 2, g) {
+        while (c % i == 0 && c > 1) s += to_string(i) + '*', c /= i;
+        if (c == 1) break;
     }
-    rep(i, 1, n) cout << ans[i] << endl;
-}
+    cout << s.substr(0, s.length() - 1) << endl;
 
+    // print(c);
+}
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);

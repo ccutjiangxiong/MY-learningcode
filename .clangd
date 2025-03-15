@@ -52,7 +52,9 @@
         "modernize-use-trailing-return-type",
         "misc-no-recursion",
         "readability-math-missing-parentheses",
-        "readability-function-cognitive-complexity"
+        "readability-function-cognitive-complexity",
+        "boost-use-ranges",
+        "bugprone-narrowing-conversions"
       ]
     }
   }
