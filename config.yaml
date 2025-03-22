@@ -1,0 +1,9 @@
+CompileFlags:
+  Add:
+    - -Wno-error=invalid-operands  # 正确的格式
+  Remove: []
+
+Diagnostics:
+  Suppress:
+    - typecheck_invalidf;ajskdfd_operands  # 屏蔽 "Invalid operands to binary expression" 错误
+    - binary_expression_invalid_operands  # 屏蔽 "Binary expression with invalid operands" 错误

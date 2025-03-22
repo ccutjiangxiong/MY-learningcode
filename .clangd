@@ -14,7 +14,13 @@
     "Compiler": "clang++"
   },
   "Diagnostics": {
+    "Suppress": [
+      "typecheck_invalid_operands",
+      "binary_expression_invalid_operands",
+      "invalid_operands"
+    ],
     "ClangTidy": {
+      "CheckOptions": {},
       "Add": [
         "*"
       ],
@@ -43,6 +49,7 @@
         "readability-misleading-indentation",
         "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
         "hicpp-no-array-decay",
+        "hicpp-signed-bitwise",
         "performance-avoid-endl",
         "cert-err58-cpp",
         "hicpp-uppercase-literal-suffix",
@@ -54,7 +61,14 @@
         "readability-math-missing-parentheses",
         "readability-function-cognitive-complexity",
         "boost-use-ranges",
-        "bugprone-narrowing-conversions"
+        "bugprone-narrowing-conversions",
+        "cppcoreguidelines-narrowing-conversions",
+        "bugprone-signed-char-misuse",
+        "cert-str34-c",
+        "bugprone-easily-swappable-parameters",
+        "performance-for-range-copy",
+        "cert-err33-c",
+        "modernize-use-designated-initializers"
       ]
     }
   }
