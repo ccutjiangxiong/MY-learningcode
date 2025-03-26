@@ -1,44 +1,50 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
+#define int long long
+#define rep(i, a, b) for (int i = (a); i <= (b); i++)
+#define rem(i, a, b) for (int i = (a); i >= (b); i--)
+const int N = 2e6 + 5;
+const int mod = 1e9 + 7, inf = 1e18 + 3;
+const double eps = 1e-6;
 using namespace std;
+using pii = pair<int, int>;
+using piii = tuple<int, int, int>;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
+template <typename... T>
+void print(T... a) {
+    ((cout << a << ' '), ...);
+    cout << "\n";
+}
+int ti = 1;
+int n;
+int f[N];
+vector<int> e[N];
+void work() {
     cin >> n;
-    vector<int> deg(n + 1, 0);
-    for (int i = 1; i < n; i++) {
+    if (n == 1) {
+        cout << 1 << ' ' << 1 << endl;
+        return;
+    }
+    rep(i, 1, n - 1) {
         int u, v;
         cin >> u >> v;
-        deg[u]++;
-        deg[v]++;
+        e[u].push_back(v);
+        e[v].push_back(u);
     }
-    int D = 0;
-    for (int i = 1; i <= n; i++) {
-        D = max(D, deg[i]);
+    int ans = 0;
+    rep(i, 1, n) ans = max(ans, (int)e[i].size());
+    cout << ans - 1 << ' ';
+    rep(i, 1, n) if (e[i].size() == 1) {
+        cout << i << endl;
+        break;
     }
-    int cntMax;
-    for (int i = 1; i <= n; i++) {
-        if (deg[i] == D) cntMax++;
-    }
-    int candidate = 0;
-    int ansK = 0;
+}
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr), cout.tie(nullptr);
 
-    for (int i = 1; i <= n; i++) {
-        if (deg[i] < D) {
-            candidate = i;
-            break;
-        }
+    if (ti == 0) cin >> ti;
+    while (ti--) {
+        work();
     }
-    if (candidate != 0) {
-        ansK = D - 1;
-    } else {
-        candidate = 1;
-        ansK = D;
-    }
-    cout << ansK << " " << candidate;
     return 0;
 }
