@@ -45,7 +45,7 @@ void Sa() {
     rep(i, 1, n) rk[sa[i]] = i;
     for (int i = 1, k = 0; i <= n; i++) {
         if (rk[i] == 1) continue;
-        if (k) k--;
+        if (k) k--;       
         int j = sa[rk[i] - 1];
         while (i + k <= n && j + k <= n && s[i + k] == s[j + k]) k++;
         h[rk[i]] = k;

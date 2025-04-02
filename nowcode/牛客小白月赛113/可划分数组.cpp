@@ -11,6 +11,7 @@ using piii = tuple<int, int, int>;
 template <typename... T>
 void print(T... a) {
     ((cout << a << ' '), ...);
+    
     cout << "\n";
 }
 int ti = 1;

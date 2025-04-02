@@ -58,7 +58,7 @@ bool judge() {
 }
 void work() {
     cin >> u;
-
+string t;
     rep(i, 1, u) {
         cin >> t;
         f[i] = t.size();

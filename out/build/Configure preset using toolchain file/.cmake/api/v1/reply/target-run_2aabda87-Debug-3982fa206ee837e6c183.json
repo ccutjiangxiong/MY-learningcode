@@ -1,0 +1,123 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/28730/Documents/MY-learningcode/nowcode/round85/bin/\u6784\u9020\u77e9\u5f62.exe"
+		},
+		{
+			"path" : "C:/Users/28730/Documents/MY-learningcode/nowcode/round85/bin/\u6784\u9020\u77e9\u5f62.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_named_executable"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 54,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -fuse-ld=lld /std:c++20 /MP /W0 /Z0 /EHsc /MD /O0 /DNDEBUG /nologo -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "run_2aabda87::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-fuse-ld=lld /std:c++20 /MP /W0 /Z0 /EHsc /MD /O0 /DNDEBUG /nologo -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/INCREMENTAL /OPT:NOREF /OPT:NOICF /subsystem:console  -Xlinker /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-fuse-ld=lld-link",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "run_2aabda87",
+	"nameOnDisk" : "\u6784\u9020\u77e9\u5f62.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/28730/Documents/MY-learningcode/out/build/Configure preset using toolchain file/CMakeFiles/run_2aabda87.dir/Unity/unity_0_cxx.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "\u6784\u9020\u77e9\u5f62.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

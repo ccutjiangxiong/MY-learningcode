@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "my_project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "run_32169665::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_32169665-Debug-4cf500ae40f2a51af7c2.json",
+					"name" : "run_32169665",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_3421743b::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_3421743b-Debug-b5bbe9001c47c29a955f.json",
+					"name" : "run_3421743b",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_5d694c8a::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_5d694c8a-Debug-813669370a370c819ccd.json",
+					"name" : "run_5d694c8a",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_779f4c24::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_779f4c24-Debug-7e2592b479e619fcef5a.json",
+					"name" : "run_779f4c24",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_a27aaac1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_a27aaac1-Debug-1b93f70609683d6c8474.json",
+					"name" : "run_a27aaac1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_b1467849::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_b1467849-Debug-8795447f5cff0aff60c6.json",
+					"name" : "run_b1467849",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_b4bb7a50::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_b4bb7a50-Debug-dcaa04815f8a25176eca.json",
+					"name" : "run_b4bb7a50",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/28730/Documents/MY-learningcode/nowcode/\u725b\u5ba2\u5c0f\u767d\u6708\u8d5b113/build",
+		"source" : "C:/Users/28730/Documents/MY-learningcode/nowcode/\u725b\u5ba2\u5c0f\u767d\u6708\u8d5b113"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

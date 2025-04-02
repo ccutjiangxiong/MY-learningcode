@@ -70,7 +70,8 @@
         "cert-err33-c",
         "modernize-use-designated-initializers",
         "modernize-use-nodiscard",
-        "misc-non-private-member-variables-in-classes"
+        "misc-non-private-member-variables-in-classes",
+        "google-readability-casting"
       ]
     }
   }

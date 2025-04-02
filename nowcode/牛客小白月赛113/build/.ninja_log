@@ -1,0 +1,22 @@
+# ninja log v6
+2	642	7651988934796413	CMakeFiles/run_44869071.dir/hello.cpp.obj	eff8b60392af1478
+956	1281	7651995831248111	C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/bin/hello.exe	b9939af4ceea0864
+486	808	7651988523647657	C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/bin/好字符串.exe	b1f353ee0683d881
+1	507	7651989060269174	CMakeFiles/run_c70e88a8.dir/hello.cpp.obj	e666a14cc93d950c
+1	485	7651988518796734	CMakeFiles/run_5d694c8a.dir/好字符串.cpp.obj	f408be4b3634f863
+2	1115	7651990495545528	CMakeFiles/run_a27aaac1.dir/Unity/unity_0_cxx.cxx.obj	6200466e2468933e
+1	760	7651989910038008	CMakeFiles/run_c70e88a8.dir/Unity/unity_0_cxx.cxx.obj	3da7760e78023ad8
+2	841	7651989994453618	CMakeFiles/run_e9abee23.dir/Unity/unity_0_cxx.cxx.obj	48274ab34cd2c4f5
+1	284	7652004278981785	CMakeFiles/run_3421743b.dir/Unity/unity_0_cxx.cxx.obj	384177c503b83466
+1116	1451	7651990506649634	C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/bin/2025.exe	6428debbb1a6b4a5
+1	811	7651990688244391	CMakeFiles/run_10044710.dir/Unity/unity_0_cxx.cxx.obj	14fde8a72540529
+1	982	7651991386126566	CMakeFiles/run_10ec027f.dir/Unity/unity_0_cxx.cxx.obj	5a0c9f57c1faf3f
+1	1047	7651992951192243	CMakeFiles/run_b1467849.dir/Unity/unity_0_cxx.cxx.obj	a16433df9abbe6
+1048	1376	7651992961682290	C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/bin/mex.exe	dbc95df9329a17f1
+2	978	7651993156243787	CMakeFiles/run_addced63.dir/Unity/unity_0_cxx.cxx.obj	8010c9f573dd2580
+2	1046	7651993238991542	CMakeFiles/run_b3a0adba.dir/Unity/unity_0_cxx.cxx.obj	cd4661c027f25aaa
+2	1063	7651994720003377	CMakeFiles/run_779f4c24.dir/Unity/unity_0_cxx.cxx.obj	86e9420db0704752
+1064	1423	7651994730608505	C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/bin/最小差值.exe	cccd8313835e56e0
+2	955	7651995821707499	CMakeFiles/run_b69f4965.dir/Unity/unity_0_cxx.cxx.obj	f69cede12fe7c0bc
+2	1026	7651999746136843	CMakeFiles/run_d342b0e3.dir/Unity/unity_0_cxx.cxx.obj	3c9a57ade1e2ed9d
+285	491	7652004281814669	C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/bin/可划分数组.exe	932c79d8ff0f67a0

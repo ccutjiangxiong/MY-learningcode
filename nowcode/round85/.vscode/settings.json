@@ -1,9 +1,13 @@
 {
   "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#e9dbb7",
+    "editorCursor.foreground": "#ef857d",
     "activityBarBadge.background": "#e9dbb7",
     "activityBarBadge.foreground": "#262626",
-    "statusBar.background": "#262626",
+    "statusBar.background": "#9f5a51",
     "statusBar.foreground": "#e9dbb7"
   }
+  // "code-runner.executorMap": {
+  //   "cpp": "cd $dir && $baseName = [System.IO.Path]::GetFileNameWithoutExtension('$fileName'); Remove-Item -Force build/target_map.txt -ErrorAction SilentlyContinue; mkdir -Force build; cd build; cmake -G Ninja .. && $targetName = (Get-Content target_map.txt -ErrorAction Stop | Where-Object { $_ -match \"^${baseName}=(.+)$\" } | ForEach-Object { $matches[1] }); if ($targetName) { ninja -j16 $targetName; if ($?) { $exePath = Resolve-Path \"../bin/${baseName}.exe\"; & $exePath } } else { Write-Host 'ERROR: Target mapping failed. Check:' -ForegroundColor Red; Get-Content target_map.txt; exit 1 }",
+  //   "cpp-clean": "cd $dir && Remove-Item -Recurse -Force build, bin -ErrorAction SilentlyContinue"
+  // }
 }

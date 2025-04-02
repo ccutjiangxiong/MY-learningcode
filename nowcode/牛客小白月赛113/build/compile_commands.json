@@ -1,0 +1,44 @@
+[
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_a27aaac1.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_a27aaac1.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_a27aaac1.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_a27aaac1.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_a27aaac1.dir\\Unity\\unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_32169665.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_32169665.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_32169665.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_32169665.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_32169665.dir\\Unity\\unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_b1467849.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_b1467849.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_b1467849.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_b1467849.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_b1467849.dir\\Unity\\unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_3421743b.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_3421743b.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_3421743b.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_3421743b.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_3421743b.dir\\Unity\\unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_5d694c8a.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_5d694c8a.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_5d694c8a.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_5d694c8a.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_5d694c8a.dir\\Unity\\unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_779f4c24.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_779f4c24.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_779f4c24.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_779f4c24.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_779f4c24.dir\\Unity\\unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "C:/Users/28730/Documents/MY-learningcode/nowcode/牛客小白月赛113/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang-cl.exe  /nologo -TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc -fuse-ld=lld /std:c++20 /MP /W0  /EHsc -O0 /DNDEBUG /nologo -nostdlib++ /MDd /Zi /Ob0 /Od /RTC1 -std:c++20 /FoCMakeFiles\\run_b4bb7a50.dir\\Unity\\unity_0_cxx.cxx.obj /FdCMakeFiles\\run_b4bb7a50.dir\\ -c -- C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_b4bb7a50.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "C:\\Users\\28730\\Documents\\MY-learningcode\\nowcode\\牛客小白月赛113\\build\\CMakeFiles\\run_b4bb7a50.dir\\Unity\\unity_0_cxx.cxx",
+  "output": "CMakeFiles\\run_b4bb7a50.dir\\Unity\\unity_0_cxx.cxx.obj"
+}
+]
