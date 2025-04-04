@@ -9,6 +9,7 @@ using namespace std;
 using pii = pair<int, int>;
 
 template <typename... T>
+
 void print(T... a) {
     ((cout << a << ' '), ...);
     cout << "\n";
