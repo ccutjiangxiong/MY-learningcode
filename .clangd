@@ -68,7 +68,9 @@
         "bugprone-easily-swappable-parameters",
         "performance-for-range-copy",
         "cert-err33-c",
-        "modernize-use-designated-initializers"
+        "modernize-use-designated-initializers",
+        "modernize-use-nodiscard",
+        "misc-non-private-member-variables-in-classes"
       ]
     }
   }

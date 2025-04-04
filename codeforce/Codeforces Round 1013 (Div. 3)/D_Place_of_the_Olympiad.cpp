@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-// #include <iostream>
 #define int long long
 #define rep(i, a, b) for (int i = (a); i <= (b); i++)
 #define rem(i, a, b) for (int i = (a); i >= (b); i--)
@@ -14,10 +13,26 @@ void print(T... a) {
     ((cout << a << ' '), ...);
     cout << "\n";
 }
-int ti = 1;
-int x[N], n, l, q;
-
-void work() {}
+int ti;
+int n, m, k;
+bool judge(int x) {
+    int h = m / (x + 1);
+    return (m - h) * n >= k;
+}
+void work() {
+    cin >> n >> m >> k;
+    int ans = 0;
+    int h = m;
+    int l = 0, r = m;
+    while (l <= r) {
+        int mid = (l + r) >> 1;
+        if (judge(mid))
+            ans = mid, r = mid - 1;
+        else
+            l = mid + 1;
+    }
+    cout << ans << endl;
+}
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);

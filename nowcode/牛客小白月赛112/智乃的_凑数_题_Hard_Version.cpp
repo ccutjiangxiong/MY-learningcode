@@ -17,10 +17,10 @@ void print(T... a) {
 int ti = 1;
 int n, m;
 int k[N], ask[N];
-vector<int> q1, q2;
+vector<pii> q1, q2;
 int vis[N], ink[N];
 map<piii, bool> vin;
-vector<int> ans[N], ans2[N];
+vector<pii> ans[N], ans2[N];
 int cnt = 0;
 char buf[1 << 21], *p1 = buf, *p2 = buf;
 char gc() {
@@ -66,6 +66,7 @@ void nwt(T... a) {
 set<int> ss;
 int hh;
 int u, v;
+int h[N];
 void dfs(int x, int u, int v) {
     if (!vis[u * v]++ && ink[u * v]) {
         ans[u * v] = q1, ans2[u * v] = q2;
@@ -73,40 +74,42 @@ void dfs(int x, int u, int v) {
     }
     if (vin[{x, max(u, v), min(v, u)}] || ss.empty() || x > n) return;
     vin[{x, max(u, v), min(u, v)}] = 1;
-    int f = 0;
-    if (u < v) swap(u, v), swap(q1, q2), f = 1;
-    if (ss.size() && u * (v + k[x]) <= *ss.rbegin() && v + k[x] <= *ss.rbegin()) {
-        q1.push_back(k[x]);
-        dfs(x + 1, u, v + k[x]);
-        q1.pop_back();
+    rep(i, 1, n) rep(j, 0, h[k[x]]) rep(p, 0, h[k[x]] - j) {
+        if (ss.size() && (u + j * k[x]) * (v + p * k[x]) <= *ss.rbegin() &&
+            max(u + j * k[x], v + p * k[x]) <= *ss.rbegin()) {
+            if (j) q1.emplace_back(k[x], j);
+            if (p) q2.emplace_back(k[x], p);
+            dfs(x + 1, u + j * k[x], v + p * k[x]);
+            if (j) q1.pop_back();
+            if (p) q2.pop_back();
+        }
     }
-    if (ss.size() && v * (u + k[x]) <= *ss.rbegin() && u + k[x] <= *ss.rbegin()) {
-        q2.push_back(k[x]);
-        dfs(x + 1, u + k[x], v);
-        q2.pop_back();
-    }
-    dfs(x + 1, u, v);
-    if (f) swap(u, v), swap(q1, q2);
 }
 
 void work() {
     nrd(n, m);
     rep(i, 1, n) k[i] = rd();
+    rep(i, 1, n) h[k[i]]++;
+    sort(k + 1, k + 1 + n);
+    n = unique(k + 1, k + 1 + n) - k - 1;
     rep(i, 1, m) ask[i] = rd();
     rep(i, 1, m) ink[ask[i]] = 1, ss.insert(ask[i]);
     sort(k + 1, k + 1 + n);
     dfs(1, 0, 0);
     rep(i, 1, m) {
         if (vis[ask[i]]) {
+            int x1 = 0, x2 = 0;
+            for (auto [x, y] : ans[ask[i]]) x1 += y;
+            for (auto [x, y] : ans2[ask[i]]) x2 += y;
             wt("Yes");
             putchar('\n');
-            wt(ans[ask[i]].size());
+            wt(x1);
             putchar(' ');
-            wt(ans2[ask[i]].size());
+            wt(x2);
             putchar('\n');
-            for (int x : ans[ask[i]]) wt(x), putchar(' ');
+            for (auto [x, y] : ans[ask[i]]) rep(j, 1, y) wt(x), putchar(' ');
             putchar('\n');
-            for (int x : ans2[ask[i]]) wt(x), putchar(' ');
+            for (auto [x, y] : ans2[ask[i]]) rep(j, 1, y) wt(x), putchar(' ');
             putchar('\n');
         } else {
             wt("No");

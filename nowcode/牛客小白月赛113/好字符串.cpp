@@ -2,38 +2,37 @@
 #define int long long
 #define rep(i, a, b) for (int i = (a); i <= (b); i++)
 #define rem(i, a, b) for (int i = (a); i >= (b); i--)
-const int  N = 2e6 + 5,mod = 1e9 + 7, inf = 1e18 + 3;
+const int N = 2e6 + 5, mod = 1e9 + 7, inf = 1e18 + 3;
 const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
 using piii = tuple<int, int, int>;
-jdfaslfj asdjfkl;
-asdfl;
-kasdjf
-    asjdfk;ajsdf;
-asjdf asdfj;
-alskdf;
-lasdjf
-    asdfj'
-template <typename... T> void print(T... a) {
+
+template <typename... T>
+void print(T... a) {
     ((cout << a << ' '), ...);
     cout << "\n";
 }
-int ti=1;
-// int n=1e10;
+int ti = 1;
 int n;
+string s;
+
 void work() {
-    int ans=0;
-    cin>>n;
-    rep(i, 1, n)(ans += i) %= mod;
-    print(ans);
+    cin >> n >> s;
+    int sum = 0;
+    rep(i, 0, n - 2) {
+        if (s[i] == s[i - 1]) sum++;
+    }
+    if (sum >= 2)
+        print("NO");
+    else
+        print("YES");
 }
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
-    
-    if (ti == 0)
-        cin >> ti;
+
+    if (ti == 0) cin >> ti;
     while (ti--) {
         work();
     }

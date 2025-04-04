@@ -7,7 +7,6 @@ const int mod = 1e9 + 7, inf = 1e18 + 3;
 const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
-using piii = tuple<int, int, int>;
 
 template <typename... T>
 void print(T... a) {
@@ -15,28 +14,24 @@ void print(T... a) {
     cout << "\n";
 }
 int ti = 1;
-int n;
-int f[N];
-vector<int> e[N];
+int n, m, k;
+int f[N], pre[N];
 void work() {
-    cin >> n;
-    if (n == 1) {
-        cout << 1 << ' ' << 1 << endl;
-        return;
-    }
-    rep(i, 1, n - 1) {
-        int u, v;
-        cin >> u >> v;
-        e[u].push_back(v);
-        e[v].push_back(u);
-    }
+    cin >> n >> m >> k;
     int ans = 0;
-    rep(i, 1, n) ans = max(ans, (int)e[i].size());
-    cout << ans - 1 << ' ';
-    rep(i, 1, n) if (e[i].size() == 1) {
-        cout << i << endl;
-        break;
+    rep(i, 1, n) cin >> f[i];
+    sort(f + 1, f + 1 + n);
+    int g = 1, p = 1;
+    rep(i, 1, n) pre[i] = pre[i - 1] + f[i];
+
+    rep(i, 2, n) {
+        while (f[g] - f[i] + k > m + 1) g++;
+        ans += (i-g) * (m + 1) + pre[i] - pre[g] - k * (i - g);
+        while (f[p] - f[i] <= k) p++;
+        ans += (i-p) * (m + 1) + pre[i] - pre[p] + k * (i - p);
     }
+
+    cout << ans << endl;
 }
 signed main() {
     ios::sync_with_stdio(false);
