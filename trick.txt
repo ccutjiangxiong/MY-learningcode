@@ -1,0 +1,4 @@
+git checkout --ours -- .          # 对所有冲突文件采用当前分支的版本
+git add .                        # 标记所有文件为已解决
+git commit -m "Merge with ours"
+
