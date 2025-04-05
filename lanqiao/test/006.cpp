@@ -20,7 +20,7 @@ int d[11][2] = {{0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}, {-1, 0}, {-1
 vector<int> ans;
 bool dfs(int x, int y, int k) {
     vis[x][y] = ans.size() + 1;
-    if (x == n && y == n && ans.size() == n * n - 1) {
+    if (x == n && y == n && (int)ans.size() == n * n - 1) {
         for (int x : ans) cout << x;
         return true;
     }

@@ -1,0 +1,1 @@
+s = input().strip() mod = 998244353 n = len(s) distinct = len(set(s)) print((n * distinct) % mod)

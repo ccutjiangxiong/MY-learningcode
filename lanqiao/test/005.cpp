@@ -15,33 +15,22 @@ void print(T... a) {
 }
 int ti = 1;
 int n;
-int a[N];
-int gcd(int a, int b) { return __gcd(a, b); }
-int gcd(int a, int b, int c) { return gcd(gcd(a, b), gcd(b, c)); }
-int fun(int a, int b, int c) { return gcd(a, b) * gcd(b, c) * gcd(a, c) / gcd(a, b, c); }
-int h[N];
-vector<int> ans;
+int a[N], h[N];
 void work() {
     cin >> n;
     rep(i, 1, n) cin >> a[i];
     sort(a + 1, a + 1 + n);
-    rep(i, 1, N) h[a[i]]++;
-    int x = 0, b = 0, c = 0;
+    rep(i, 1, N - 1) h[a[i]]++;
     int ma = 0;
-    rem(i, N, 2) {
+    rem(i, N - 1, 1) {
         vector<int> t;
-        for (int j = i; j <= N; j += i) {
-            rep(k, 1, h[j]) if (h[j]) t.push_back(j);
-        }
+        for (int j = i; j <= N; j += i) rep(k, 1, h[j]) t.push_back(j);
+
         if (t.size() >= 3) {
-            int y = fun(t[t.size() - 3], t[t.size() - 2], t[t.size() - 1]);
-            if (y >= ma) x = t[t.size() - 3], b = t[t.size() - 2], c = t[t.size() - 1], ma = y;
+            print(t[0], t[1], t[2]);
+            return;
         }
     }
-    if (x && b && c)
-        print(x, b, c);
-    else
-        print(a[1], a[2], a[3]);
 }
 signed main() {
     ios::sync_with_stdio(false);
