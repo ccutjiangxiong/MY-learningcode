@@ -7,7 +7,7 @@ const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
 using piii = tuple<int, int, int>;
-
+using ill=__int128;
 template <typename... T>
 void print(T... a) {
     ((cout << a << ' '), ...);

@@ -11,7 +11,7 @@
       "-Wno-unused-variable",
       "-Wunused-but-set-variable"
     ],
-    "Compiler": "clang++"
+    "Compiler": "g++"
   },
   "Diagnostics": {
     "Suppress": [
@@ -71,7 +71,9 @@
         "modernize-use-designated-initializers",
         "modernize-use-nodiscard",
         "misc-non-private-member-variables-in-classes",
-        "google-readability-casting"
+        "google-readability-casting",
+        "bugprone-assignment-in-if-condition",
+        "modernize-use-bool-literals"
       ]
     }
   }
