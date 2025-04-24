@@ -6,16 +6,18 @@
 #define se second
 #define fr first
 #define vi vector<int>
+#define vii vector<pii>
+#define viii vector<piii>
 #define pb emplace_back
 #define ep emplace
+#define rg ranges
 #define me(a, x) memset(a, x, sizeof(a))
-const int N = 2e6 + 5, mod = 1e9 + 7, inf = 1e18 + 3;
+const int N = 2e5 + 5, mod = 1e9 + 7, inf = 1e18 + 3;
 const double eps = 1e-6;
 using namespace std;
 using pii = pair<int, int>;
 using piii = tuple<int, int, int>;
 using ill = __int128;
-
 void be(auto edges[N]) {
     int u, v;
     cin >> u >> v;
@@ -29,55 +31,85 @@ void print(T... a) {
 }
 
 int ti = 1;
-int n, m, s, t, mxf, mic, cnt;
-vector<piii> e[N];
-int f[N],dis[N], vis[N], pre[N], pe[N];
-double g[222][222];
-void add(int u, int v, int c, double w,int id) {
+vector<tuple<int, int, float>> e[N];
+int g[N], cur[N], f[N], vis[N];
+float d[N], dis[N];
+int n, m, s, t, cnt = 0;
+void add(int u, int v, int c, float w, int id) {
     int x = cnt++, y = cnt++;
-    e[u].pb(v, w, x);
-    e[v].pb(u, -w, y);
-    g[x] = c, g[y] = 0,f[id]=x;
+    e[u].pb(v, x, w);
+    e[v].pb(u, y, 1.0 / w);
+    g[x] = c, g[y] = 0, f[id] = x;
 }
-bool spfa(int s, int t) {
-    rep(i, 1, n) dis[i] = 0;
+bool bfs(int s, int t) {
+    rep(i, 0, t) d[i] = -1;
     queue<int> q;
-    dis[s] = 0, vis[s] = 1, q.push(s);
-    while (q.size()) {
+    q.push(s);
+    d[s] = 1;
+    while (!q.empty()) {
         int u = q.front();
         q.pop();
-        vis[u] = 0;
-        for (auto [v, w, id] : e[u])
-            if (g[id] && dis[v] < dis[u] * w) {
-                dis[v] = dis[u] * w;
-                pre[v] = u, pe[v] = id;
-                if (!vis[v]) q.push(v), vis[v] = 1;
+        for (auto [v, w, ww] : e[u]) {
+            if (g[w] && d[v] == -1) {
+                d[v] = d[u] * ww;
+                if (v == t) return true;
+                q.push(v);
             }
+        }
     }
-    return dis[t] < inf;
+    return false;
 }
-void mcmf(int s, int t) {
-    while (spfa(s, t)) {
-        int fl = inf;
-        for (int u = t; u != s; u = pre[u]) fl = min(fl, g[pe[u]]);
-        mxf += fl, mic += fl * dis[t];
-        for (int u = t; u != s; u = pre[u]) g[pe[u]] -= fl, g[pe[u] ^ 1] += fl;
+int dfs(int u, int flow, int t) {
+    if (u == t) return flow;
+    int sum = 0;
+    for (int &i = cur[u]; i < e[u].size(); i++) {
+        auto [v, w, ww] = e[u][i];
+        if (d[v] == d[u] * ww && g[w]) {
+            int f = min(flow, g[w]);
+            int re = dfs(v, f, t);
+            g[w] -= re, g[w ^ 1] += re;
+            sum += re, flow -= re;
+            if (flow == 0) break;
+        }
     }
+    if (sum == 0) d[u] = 0;
+    return sum;
+}
+int dinic(int s, int t) {
+    int ans = 0;
+    while (bfs(s, t)) {
+        ans += dfs(s, inf, t);
+        rep(i, 0, t) cur[i] = 0;
+    }
+    return ans;
 }
 int p[222][222], a[N], b[N];
-void work() {
-    // int s,t;
 
+int fid[105][105];
+
+void work() {
     cin >> n >> m;
     rep(i, 1, n) rep(j, 1, m) cin >> p[i][j];
     rep(i, 1, n) cin >> a[i];
-    rep(i, 1, m) cin >> b[i];
-    s = 1, t = n + m + 1;
-    rep(i, 1, n) rep(j, n + 1, n + m) add(i, j, 1, p[i][j]);
-    rep(i, 1, n) add(s, i, a[i], 100);
-    rep(i, n + 1, n + m) add(i, t, b[i], 100);
-    mcmf(s, t);
+    rep(j, 1, m) cin >> b[j];
+
+    s = 0;
+    t = n + m + 1;
+    cnt = 0;
+    // clear graph
+    rep(i, 0, t) { e[i].clear(); }
+    rep(i, 1, n) rep(j, 1, m) {
+        fid[i][j] = cnt;  // this is the index of the forward edge
+        add(i, n + j, 1, p[i][j] * 0.01, 0);
+    }
+    rep(i, 1, n) add(s, i, a[i], 0, 0);
+    rep(j, 1, m) add(n + j, t, b[j], 0, 0);
+    dinic(s, t);
+    vector<string> ans(n, string(m, '0'));
+    rep(i, 1, n) rep(j, 1, m) if (g[fid[i][j]] == 0) ans[i - 1][j - 1] = '1';
+    for (auto &row : ans) cout << row << "\n";
 }
+
 
 signed main() {
     ios::sync_with_stdio(false);
