@@ -14,6 +14,8 @@ void pt(T... a) {
 }
 void work() {
     cin >> n;
+    cout << n * n * n << endl;
+    return;
     rep(i, 1, n) cin >> a[i] >> b[i] >> c[i];
     rep(i, 1, n) {
         int u = 0, v = 0;
@@ -21,8 +23,8 @@ void work() {
         rep(j, 1, n) if (i != j) {
             if (a[j] < a[i] && b[i] >= c[j]) u = j;
             if (a[j] < a[i] && c[i] <= b[i]) v = j;
-            pt(u, v);
         }
+        pt(u, v);
     }
 }
 signed main() {
