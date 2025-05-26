@@ -22,5 +22,3 @@ end
 -- 映射
 vim.api.nvim_set_keymap('n', '}', ':lua jump_to_next_empty_line()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '{', ':lua jump_to_prev_empty_line()<CR>', { noremap = true, silent = true })
--- 自定义多行行头插入
-vim.api.nvim_set_keymap('v', 'I', ':norm I<CR>', { noremap = true, silent = true })

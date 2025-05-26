@@ -73,7 +73,8 @@
         "misc-non-private-member-variables-in-classes",
         "google-readability-casting",
         "bugprone-assignment-in-if-condition",
-        "modernize-use-bool-literals"
+        "modernize-use-bool-literals",
+        "cppcoreguidelines-macro-usage"
       ]
     }
   }
