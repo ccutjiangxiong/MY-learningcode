@@ -1,0 +1,1 @@
+{"name":"Local: f","url":"c:\\Users\\28730\\Documents\\MY-learningcode\\lanqiao\\New folder\\f.cpp","tests":[{"id":1749888976843,"input":"3\n3 6 2\n12 144 3\n233 251640 10","output":"2\n72\n905954656"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\28730\\Documents\\MY-learningcode\\lanqiao\\New folder\\f.cpp","group":"local","local":true}

@@ -74,7 +74,9 @@
         "google-readability-casting",
         "bugprone-assignment-in-if-condition",
         "modernize-use-bool-literals",
-        "cppcoreguidelines-macro-usage"
+        "cppcoreguidelines-macro-usage",
+        "cppcoreguidelines-owning-memory",
+        "misc-use-anonymous-namespace"
       ]
     }
   }

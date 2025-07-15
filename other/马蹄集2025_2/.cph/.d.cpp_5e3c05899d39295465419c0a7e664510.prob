@@ -1,0 +1,1 @@
+{"name":"Local: d","url":"c:\\Users\\28730\\Documents\\MY-learningcode\\other\\马蹄集2025_2\\d.cpp","tests":[{"id":1751784711507,"input":"1\n3 2\n1 2 3\n1 2\n1 3\n0\n1","output":"1\n3 2\n1 2 3\n1 2\n1 3\n0\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\28730\\Documents\\MY-learningcode\\other\\马蹄集2025_2\\d.cpp","group":"local","local":true}

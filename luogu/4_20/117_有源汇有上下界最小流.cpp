@@ -95,7 +95,7 @@ void work() {
     add(t, s, inf, 0);
     rep(i, 1, n) {
         if (y[i] > 0)
-            add(ss, i, y[i], 2*m), totf += y[i];
+            add(ss, i, y[i], 2 * m), totf += y[i];
         else if (y[i] < 0)
             add(i, tt, -y[i], m + 1);
     }

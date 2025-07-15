@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"c:\\Users\\28730\\Documents\\MY-learningcode\\other\\马蹄杯2025_省第一场\\a.cpp","tests":[{"id":1750985403825,"input":"3\nabc abc\nabc acb\naba cba","output":"Y\nY\nN"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\28730\\Documents\\MY-learningcode\\other\\马蹄杯2025_省第一场\\a.cpp","group":"local","local":true}
