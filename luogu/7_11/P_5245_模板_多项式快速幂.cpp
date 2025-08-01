@@ -305,13 +305,13 @@ mint sqrt(const mint& n, int mod) {
     mint r1 = x, r2 = 0 - x;
     return (int)r1 < (int)r2 ? r1 : r2;
 }
-static vector<mint> sqrt(vector<mint> A, int n, int mod) {
+static vector<mint> Sqrt(vector<mint> A, int n, int mod) {
     if (n == 1) {
         mint r = sqrt(A[0], mod);
         return {r};
     }
     int m = (n + 1) >> 1;
-    auto B = sqrt(A, m, mod);
+    auto B = Sqrt(A, m, mod);
     auto InvB = Poly::Inv(B, n);
     auto C = Poly::Mul(A, InvB);
     C.resize(n);
@@ -322,7 +322,7 @@ static vector<mint> sqrt(vector<mint> A, int n, int mod) {
 
     return S;
 }
-Poly pow(Poly P, const string& K, int n) {
+Poly Pow(Poly P, const string& K, int n) {
     auto a = P.a;
     vmi R(n), Bv = a, C;
     if (K == "0") return R[0] = 1, R;
@@ -338,7 +338,7 @@ Poly pow(Poly P, const string& K, int n) {
         for (char c : K) kll = kll * 10 + (c - '0');
         int sh = l * kll;
         for (int i = l; i < m && sz(C) < n - sh; i++) C.push_back(a[i]);
-        Poly PC(C), PD = pow(PC, K, n - sh);
+        Poly PC(C), PD = Pow(PC, K, n - sh);
         vmi R(n, 0), vD = PD.a;
         for (int i = 0; i < sz(vD); i++) R[i + sh] = vD[i];
         return Poly(R);
@@ -364,7 +364,7 @@ void work() {
     vector<mint> A(n);
     for (int i = 0; i < n; i++) cin >> A[i];
     Poly f(A);
-    auto ans = pow(f, K, n);
+    auto ans = Pow(f, K, n);
     pta(ans.a, 0, n - 1);
 }
 signed main() {

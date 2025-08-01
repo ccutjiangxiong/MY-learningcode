@@ -22,13 +22,13 @@
 #define upp upper_bound
 #define con contains
 #define me(a, x) memset(a, x, sizeof(a))
-#define pta(x,a,b) rep(i,a,b) cout<<x[i]<<" \n"[i==b];
+#define pta(x, a, b) rep(i, a, b) cout << x[i] << " \n"[i == b];
 #define me1(x, n, ...) \
-    for (auto *h : {__VA_ARGS__}) rep(i, 0, (n)) h[i] = x;
+    for (auto* h : {__VA_ARGS__}) rep(i, 0, (n)) h[i] = x;
 #define me2(x, n, m, ...) \
     for (auto h : {__VA_ARGS__}) rep(i, 0, (n)) rep(j, 0, (m)) h[i][j] = x;
 #define fi1(x, n1, n2, ...) \
-    for (auto *h : {__VA_ARGS__}) rep(i, (n1), (n2)) h[i] = x;
+    for (auto* h : {__VA_ARGS__}) rep(i, (n1), (n2)) h[i] = x;
 #define fl2(x, n1, n2, m1, m2, ...) \
     for (auto h : {__VA_ARGS__}) rep(i, (n1), (n2)) rep(j, (m1), (m2)) h[i][j] = x;
 #define Ye(x) (x) ? "YES" : "NO"
@@ -70,69 +70,52 @@ void pt(T... a) {
 int ti = 1, n, m, k, a[N], b[N], c[N], ans, res, tot, x, y, z;
 int f1[N], f2[N], g1[N], g2[N];
 vi e[N];
-template <const int mod>
-class modInt {
+const int MOD = 998424353, PHI = MOD - 1;
+class mint {
    public:
-    modInt(const int x = 0) : num(x % mod) {}
+    mint(const int x = 0) : num((x % MOD + MOD) % MOD) {}
     explicit operator int() { return num; }
-    static constexpr int phi() {
-        int res = mod, x = mod;
-        for (int p = 2; p * p <= x; ++p) {
-            if (x % p == 0) {
-                while (x % p == 0) x /= p;
-                res = res / p * (p - 1);
-            }
-        }
-        if (x > 1) res = res / x * (x - 1);
-        return res;
-    }
-    static constexpr int phi_v = phi();
-    static modInt fastPow(modInt a, int b)  // 快速幂，静态函数
+    static mint fastPow(mint a, int b)  // 快速幂，静态函数
     {
         if (b < 0) return fastPow(inv(a), -b);
-        b = b % (phi_v) + phi_v;
-        modInt res(1);
+        mint res(1);
         for (; b; a = a * a, b >>= 1)
             if (b & 1) res = res * a;
         return res;
     }
     template <typename... Ts>
-    modInt pow(Ts... exps) const {
+    mint pow(Ts... exps) const {
         int e = 1;
-        ((e = ((__int128)e * ((exps % phi_v + phi_v) % phi_v)) % phi_v), ...);
+        ((e = (ill)e * exps % PHI), ...);
         return fastPow(*this, e);
     }
-    static modInt inv(const modInt x) { return fastPow(x, mod - 2); }
-    friend std::ostream& operator<<(std::ostream& ou, const modInt& x) { return ou << x.num, ou;}
-    friend std::istream& operator>>(std::istream& in, modInt& x) { return cin >> x.num, in; }
-    constexpr modInt& operator-=(const modInt& o) noexcept {
-        return (num -= o.num - mod) %= mod, *this;
+    static mint inv(const mint x) { return fastPow(x, mod - 2); }
+    friend std::ostream& operator<<(std::ostream& ou, const mint& x) { return ou << x.num, ou; }
+    friend std::istream& operator>>(std::istream& in, mint& x) { return cin >> x.num, in; }
+    constexpr mint& operator+=(const mint& o) noexcept {
+        return num = ((ill)num + o.num) % MOD, *this;
     }
-    constexpr modInt& operator+=(const modInt& o) noexcept { return (num += o.num) %= mod, *this; }
-    constexpr modInt& operator*=(const modInt& o) noexcept { return (num *= o.num) %= mod, *this; }
-    constexpr modInt& operator/=(const modInt& o) noexcept { return *this *= inv(o); }
-    friend constexpr modInt operator+(modInt a, const modInt& b) noexcept { return a += b; }
-    friend constexpr modInt operator-(modInt a, const modInt& b) noexcept { return a -= b; }
-    friend constexpr modInt operator*(modInt a, const modInt& b) noexcept { return a *= b; }
-    friend constexpr modInt operator/(modInt a, const modInt& b) noexcept { return a /= b; }
-    friend constexpr modInt operator^(modInt a, int e) noexcept { return fastPow(a, e); }
-    constexpr modInt operator-() const noexcept { return modInt(0) - *this; }
-    friend constexpr auto operator<=>(const modInt& a, const modInt& b) noexcept = default;
-    constexpr modInt& operator++() noexcept { return *this += 1; }
-    constexpr modInt& operator--() noexcept { return *this -= 1; }
-    friend constexpr modInt operator+(modInt a, int b) noexcept { return a += b; }
-    friend constexpr modInt operator-(modInt a, int b) noexcept { return a -= b; }
-    friend constexpr modInt operator*(modInt a, int b) noexcept { return a *= b; }
-    friend constexpr modInt operator/(modInt a, int b) noexcept { return a /= b; }
+    constexpr mint& operator*=(const mint& o) noexcept {
+        return num = (ill)num * o.num % MOD, *this;
+    }
+    mint& operator-=(const mint& o) noexcept { return *this += -o.num; }
+    mint& operator/=(const mint& o) noexcept { return *this *= inv(o); }
+
+    friend mint operator^(mint a, int e) noexcept { return fastPow(a, e); }
+    mint operator-() const noexcept { return mint(0) - *this; }
+    friend auto operator<=>(const mint& a, const mint& b) noexcept = default;
+    mint& operator++() noexcept { return *this += 1; }
+    mint& operator--() noexcept { return *this -= 1; }
+    friend mint operator+(mint a, const mint& b) noexcept { return a += b; }
+    friend mint operator-(mint a, const mint& b) noexcept { return a -= b; }
+    friend mint operator*(mint a, const mint& b) noexcept { return a *= b; }
+    friend mint operator/(mint a, const mint& b) noexcept { return a /= b; }
 
     int num;
 };
-const int MOD = 1000000007;
-using mint = modInt<MOD>;
-using vmi = vector<mint>;
-void work() {
 
-}
+using vmi = vector<mint>;
+void work() {}
 
 signed main() {
     ios::sync_with_stdio(false);
