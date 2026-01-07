@@ -1,0 +1,2 @@
+# 启用编译数据库的生成
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
