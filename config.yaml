@@ -1,9 +1,11 @@
-CompileFlags:
-  Add:
-    - -Wno-error=invalid-operands  # 正确的格式
-  Remove: []
-
-Diagnostics:
-  Suppress:
-    - typecheck_invalidf;ajskdfd_operands  # 屏蔽 "Invalid operands to binary expression" 错误
-    - binary_expression_invalid_operands  # 屏蔽 "Binary expression with invalid operands" 错误
+# # 这是正确的 .clangd 文件内容
+# CompileFlags:
+#   Add:
+#     # 指定C++语言标准，例如 C++20
+#     - -std=c++20
+#     # 指定头文件搜索路径，让clangd能找到标准库
+#     - -ID:/mingw64/x86_64-w64-mingw32/include
+#     # 如果项目有自定义头文件目录，也可以在这里添加
+#     # - -I${workspaceFolder}/include
+#   # 或者，您也可以指定编译器，clangd会尝试从该编译器自动获取系统路径 [1](@ref)
+#   # Compiler: gcc.exe
