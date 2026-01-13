@@ -16,6 +16,7 @@ void print(T... a) {
 }
 int ti;
 int n;
+
 string s;
 void work() {
     cin >> n >> s;
