@@ -12,7 +12,6 @@ void init() {
     }
 }
 
-
 const ll inv2 = (mod + 1) / 2;
 #define dcsl(x, y) (inv2 * (x + y) % mod * (y - x + 1) % mod)
 #define sum(x, y) ((psquared[y] - psquared[x - 1] + mod) % mod)

@@ -2,3 +2,5 @@ build/
 out/
 .cph/
 .vscode/
+**/.vscode/
+**/.cph/
