@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\run_2477907e.dir/objects.a
-C:\Users\28730\Documents\mingw64\bin\ar.exe qc CMakeFiles\run_2477907e.dir/objects.a @CMakeFiles\run_2477907e.dir\objects1.rsp
-clang-cl  -fuse-ld=lld /std:c++20 /MP /W0 /Z0 /EHsc /MD /O0 /DNDEBUG /nologo /INCREMENTAL /OPT:NOREF /OPT:NOICF /subsystem:console -Wl,--whole-archive CMakeFiles\run_2477907e.dir/objects.a -Wl,--no-whole-archive -o C:\Users\28730\MY-learningcode-1\nowcode\round85\bin\yjkhk.exe -Wl,--out-implib,libyjkhk.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\run_2477907e.dir\linkLibs.rsp

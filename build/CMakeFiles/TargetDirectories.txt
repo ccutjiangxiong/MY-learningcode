@@ -1,13 +1,2 @@
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_1d96f754.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_09bc8378.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_2477907e.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_91c1a7c1.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_9b06e607.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_bc3e68d2.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_90a4f6fb.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_68020c01.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_bc0bbf9b.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_0a21db96.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/run_2aabda87.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/edit_cache.dir
-C:/Users/28730/MY-learningcode-1/build/CMakeFiles/rebuild_cache.dir
+C:/Users/28730/MY-learningcode/build/CMakeFiles/edit_cache.dir
+C:/Users/28730/MY-learningcode/build/CMakeFiles/rebuild_cache.dir
