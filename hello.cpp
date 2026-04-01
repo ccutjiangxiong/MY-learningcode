@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-#include<iostream>
+
+#include <iostream>
 #define int long long
 #define ld long double
 #define rep(i, a, b) for (int i = (a); i <= (b); i++)
@@ -35,16 +36,13 @@ void print(T... a) {
 
 int ti;
 
-void work() {
-    
-}
+void work() {}
 
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
-    
-    if (ti == 0)
-        cin >> ti;
+
+    if (ti == 0) cin >> ti;
     while (ti--) {
         work();
     }
