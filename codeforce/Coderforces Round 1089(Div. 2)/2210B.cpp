@@ -22,21 +22,6 @@
 #define upp upper_bound
 #define con contains
 #define me(a, x) memset(a, x, sizeof(a))
-<<<<<<< HEAD
-#define pta(x, a, b) rep(i, a, b) cout << x[i] << " \n"[i == b];
-#define Ye(x) (x) ? "YES" : "NO"
-using namespace std;
-auto rng = mt19937(chrono::steady_clock::now().time_since_epoch().count());
-// using namespace __gnu_cxx;
-// using namespace __gnu_pbds;
-//  template <typename Key, typename Mapped = null_type, typename Compare =
-//  std::less<Key>> using ost = tree<Key, Mapped, Compare, rb_tree_tag,
-//  tree_order_statistics_node_update>; template <typename T, typename Compare =
-//  std::greater<T>> using hp = __gnu_pbds::priority_queue<T, Compare,
-//  pairing_heap_tag>; template <typename Key, typename Mapped = null_type,
-//  typename Access = trie_string_access_traits<>> using tri = trie<Key, Mapped,
-//  Access, pat_trie_tag, trie_prefix_search_node_update>;
-=======
 #define pta(x,a,b) rep(i,a,b) cout<<x[i]<<" \n"[i==b];
 #define Ye(x) (x) ? "YES" : "NO"
 using namespace std;
@@ -49,7 +34,6 @@ auto rng = mt19937(chrono::steady_clock::now().time_since_epoch().count());
 // using hp = __gnu_pbds::priority_queue<T, Compare, pairing_heap_tag>;
 // template <typename Key, typename Mapped = null_type, typename Access = trie_string_access_traits<>>
 // using tri = trie<Key, Mapped, Access, pat_trie_tag, trie_prefix_search_node_update>;
->>>>>>> a3a8140391a084cc74edbe878ad52831b38ac744
 using pii = pair<int, int>;
 using piii = tuple<int, int, int>;
 using vi = vector<int>;
@@ -61,63 +45,16 @@ using ll = int64_t;
 using cpx = complex<ld>;
 const int N = 2e6 + 5, mod = 1e9 + 7, inf = 1e18 + 3;
 const ld eps = 1e-6, PI = acosl(-1);
-<<<<<<< HEAD
-template <typename... T> void pt(T... a) {
-  ((cout << a << ' '), ...);
-  cout << "\n";
-=======
 template <typename... T>
 void pt(T... a) {
     ((cout << a << ' '), ...);
     cout << "\n";
->>>>>>> a3a8140391a084cc74edbe878ad52831b38ac744
 }
 
-int ti = 0, n, m, k, a[N], b[N], c[N], ans, res, tot, x, y, z;
+int ti = 1, n, m, k, a[N], b[N], c[N], ans, res, tot, x, y, z;
 int f1[N], f2[N], g1[N], g2[N];
 vi e[N];
-<<<<<<< HEAD
-int dp[1111][1111];
-void work() {
-  cin >> n;
-  int ans = 0;
-  me(dp,0x3f);
-  c[n+1]=0;
-  rep(i, 1, n) cin >> a[i], ans ^= a[i];
-  rep(i,1,n)b[i]=b[i-1]^a[i];
-  rem(i,n,1) c[i]=c[i+1]^a[i];
-  rep(i,1,n) {
-    rep(j,i)
-  }
-
-  cout << ans << endl;
-}
-
-signed main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr), cout.tie(nullptr);
-
-  if (ti == 0)
-    cin >> ti;
-  while (ti--) {
-    work();
-  }
-  return 0;
-=======
-int dp[N];
-void work() {
-cin>>n;
-rep(i,1,n)cin>>a[i],dp[i]=dp[i-1]^a[i];
-rep(i,1,n){
-    int mi=inf;
-    int cur=0;
-    rem(j,i,1){
-            cur^=a[j];
-        mi=min(mi,dp[j-1]);
-        dp[i]=min(dp[i],cur+mi);
-    }
-}
-cout<<dp[n]<<endl;
+void work() {  
 }
 
 signed main() {
@@ -129,5 +66,4 @@ signed main() {
         work();
     }
     return 0;
->>>>>>> a3a8140391a084cc74edbe878ad52831b38ac744
 }
